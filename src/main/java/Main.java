@@ -5,12 +5,35 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class Main {
-    //ZMIANA
-    public static void main(String[] args) throws IOException {
-        File folder = new File("C:/Users/Ojciec Mateusz/Desktop/zdjecia");
-        File[] fileList = folder.listFiles();
 
+
+public class Main {
+    public static int factorial(int n){
+        int out=n;
+        for(int i=n-1; i>0; i--){
+            out*=i;
+        }
+        return out;
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        File folder = new File("C:/Users/Ojciec Mateusz/Desktop/projekt java/zdjecia");
+        int len;
+        File[] fileList = folder.listFiles();
+        if (fileList.length == 0) {
+            return;
+        }
+
+        if (fileList.length == 2) {
+            len = 2;
+        }
+        else {
+            len = factorial(fileList.length) / factorial(fileList.length - 2) * 2;
+        }
+        File[] deletionList = new File[len];
+
+        int k=0;
         for (int i=0; i<fileList.length; i++){
             for (int j=i+1; j<fileList.length;j++){
                 ImageChecker x = new ImageChecker();
@@ -22,13 +45,22 @@ public class Main {
                 } else {
                     x.setOne(two);
                     x.setTwo(one);
-                    //testowa zmiana
+
                 }
-                System.out.println("Zdjecie " + fileList[i] + " oraz zdjecie " + fileList[j]+":");
-                System.out.println(x.compareImages());
+
+                if(x.compareImages()){
+
+                    deletionList[k]=fileList[j];
+                    k++;
+                }
             }
         }
 
-
+        for (int x=0; x<k; x++){
+            File del=deletionList[x];
+            del.delete();
+        }
     }
+
+
 }

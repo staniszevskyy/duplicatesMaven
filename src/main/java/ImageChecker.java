@@ -8,9 +8,7 @@ public class ImageChecker {
     private int x = 0;
     private int y = 0;
 
-    public ImageChecker() {
 
-    }
 
     public boolean compareImages() {
         int f = 20;
