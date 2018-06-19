@@ -11,38 +11,23 @@ public class ImageChecker {
 
 
     public boolean compareImages() {
-        int f = 20;
+        int f=10;
+
         int w1 = Math.min(50, one.getWidth() - two.getWidth());
         int h1 = Math.min(50, one.getHeight() - two.getHeight());
         int w2 = Math.min(5, one.getWidth() - two.getWidth());
         int h2 = Math.min(5, one.getHeight() - two.getHeight());
-        /*for (int i = 0; i <= one.getWidth() - two.getWidth(); i += f) {
-            for (int j = 0; j <= one.getHeight() - two.getHeight(); j += f) {
-                compareSubset(i, j, f);
-            }
-        }
-        one = one.getSubimage(Math.max(0, x - w1), Math.max(0, y - h1),
-                Math.min(two.getWidth() + w1, one.getWidth() - x + w1),
-                Math.min(two.getHeight() + h1, one.getHeight() - y + h1));
-        x = 0;
-        y = 0;
-        difference = 0;
-        f = 5;
-        for (int i = 0; i <= one.getWidth() - two.getWidth(); i += f) {
-            for (int j = 0; j <= one.getHeight() - two.getHeight(); j += f) {
-                compareSubset(i, j, f);
-            }
-        }*/
+
         one = one.getSubimage(Math.max(0, x - w2), Math.max(0, y - h2),
                 Math.min(two.getWidth() + w2, one.getWidth() - x + w2),
                 Math.min(two.getHeight() + h2, one.getHeight() - y + h2));
-        f = 10;
+
         for (int i = 0; i <= one.getWidth() - two.getWidth(); i += f) {
             for (int j = 0; j <= one.getHeight() - two.getHeight(); j += f) {
                 compareSubset(i, j, f);
             }
         }
-
+        System.out.println(difference);
         return difference < 0.1;
     }
 

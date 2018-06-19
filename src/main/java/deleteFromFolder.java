@@ -31,6 +31,7 @@ public class deleteFromFolder extends ImageChecker {
 
     public deleteFromFolder(String path) throws IOException{
         this.path = path;
+
     }
     public void delete () throws IOException {
         int count=0;
