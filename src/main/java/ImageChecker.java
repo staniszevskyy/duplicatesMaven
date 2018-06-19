@@ -42,7 +42,7 @@ public class ImageChecker {
                 compareSubset(i, j, f);
             }
         }
-        System.out.println(difference);
+
         return difference < 0.1;
     }
 
