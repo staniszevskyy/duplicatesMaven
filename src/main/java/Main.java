@@ -9,7 +9,13 @@ import java.io.IOException;
 
 public class Main {
 
-
+    /* Projekt zaliczeniowy z przedmiotu Java,
+    temat:Usuwanie zduplikowanych zdj z folderu
+    Autorzy:
+    Wojtasiewicz Dominika
+    Staniszewski Mateusz
+    Terkała Daniel
+    Grupa nr.24 ,czwartek 12.45*/
 
     public static void main(String[] args) throws IOException {
         Scanner x = new Scanner(System.in);
