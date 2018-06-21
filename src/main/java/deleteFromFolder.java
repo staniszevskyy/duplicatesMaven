@@ -42,9 +42,8 @@ public class deleteFromFolder extends ImageChecker {
             return;
         }
 
-
-        if (fileList.length == 2) {
-            len = 2;
+        if (fileList.length == 2 || fileList.length==1) {
+            len = fileList.length;
         }
         else {
             len = Newton (fileList.length, 2);
