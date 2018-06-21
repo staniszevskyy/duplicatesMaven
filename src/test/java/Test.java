@@ -7,6 +7,9 @@ import org.junit.Assert;
 public class Test  {
     @org.junit.Test
     public void testIdentJPGS() {
+    /*
+    test sprawdzający czy duplikaty JPGów zostaną usunięte
+    */
         File folder = new File("C:/Users/Ojciec Mateusz/Desktop/projekt java/test1");
         File[] fileList = folder.listFiles();
         ImageChecker x = new ImageChecker();
@@ -27,6 +30,9 @@ public class Test  {
 
     @org.junit.Test
     public void testIdentResizedJPGS() {
+        /*
+    test sprawdzający czy takie samo zdjecie ze zmienionym rozmiarem bedzie wykryte jako duplikat czy nie
+    */
         File folder = new File("C:/Users/Ojciec Mateusz/Desktop/projekt java/test2");
         File[] fileList = folder.listFiles();
         ImageChecker x = new ImageChecker();
@@ -47,6 +53,9 @@ public class Test  {
 
     @org.junit.Test
     public void testPNGS() {
+         /*
+    test sprawdzający czy duplikaty PNGów zostaną usunięte
+    */
         File folder = new File("C:/Users/Ojciec Mateusz/Desktop/projekt java/test3");
         File[] fileList = folder.listFiles();
         ImageChecker x = new ImageChecker();
@@ -67,6 +76,9 @@ public class Test  {
 
     @org.junit.Test
     public void testTIFS() {
+         /*
+    test sprawdzający czy duplikaty TIFów zostaną usunięte
+    */
         File folder = new File("C:/Users/Ojciec Mateusz/Desktop/projekt java/test4");
         File[] fileList = folder.listFiles();
         ImageChecker x = new ImageChecker();
@@ -87,6 +99,9 @@ public class Test  {
 
     @org.junit.Test
     public void testBMPS() {
+         /*
+    test sprawdzający czy duplikaty BMPów zostaną usunięte
+    */
         File folder = new File("C:/Users/Ojciec Mateusz/Desktop/projekt java/test5");
         File[] fileList = folder.listFiles();
         ImageChecker x = new ImageChecker();
@@ -107,6 +122,9 @@ public class Test  {
 
     @org.junit.Test
     public void testCut() {
+         /*
+    test sprawdzający czy zdjecie z wyciętym kawałkiem porównane z drugim bedzie wykryte jako duplikat
+    */
         File folder = new File("C:/Users/Ojciec Mateusz/Desktop/projekt java/test6");
         File[] fileList = folder.listFiles();
         ImageChecker x = new ImageChecker();
